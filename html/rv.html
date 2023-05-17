@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RED VELVET</title>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script> 
+      function addToCart(itemName) {
+          var cartItems = sessionStorage.getItem('cartItems');
+          if (cartItems) {
+              cartItems = JSON.parse(cartItems);
+              cartItems.push(itemName);
+          } else {
+              cartItems = [itemName];
+          }
+          sessionStorage.setItem('cartItems', JSON.stringify(cartItems));
+          alert(itemName + ' added to cart!');
+      }
+  </script>
+</head>
+<body>
+  <header class="rv">
+    <h1>RED VELVET</h1>
+  </header>
+  <nav class="rvnav">
+    <a href="../index.html" class="black">HOME</a>
+    <a href="../html/about.html"class="black">ABOUT US</a>
+    <a href="../html/help.html"class="black">HELP</a>
+    <a href="../html/shop.html"class="black">SHOP</a>
+    <a href="../html/cart.html  "class="black">CART</a>
+
+  </nav>
+  </header>
+  
+  <main>
+    <div class="product">
+      <img src="../pictures/rv/rvlight.jpg" alt="Product 1">
+      <h2>RedVelvet LightStick</h2>
+      <p>₱2,600.00</p>
+      <button onclick="addToCart('RedVelvet LightStick')">Add to Cart</button>
+    </div>
+    
+    <div class="product">
+      <img src="../pictures/rv/bday.jpg" alt="Product 2">
+      <h2> The Reve Festival 2022 </h2>
+      <p>₱700.00</p>
+      <button onclick="addToCart('The Reve Festival 2022')">Add to Cart</button>
+    </div>
+    
+    <div class="product">
+      <img src="../pictures/rv/fml.jpg" alt="Product 3">
+      <h2>The ReVe Festival 2022 - Feel My Rhythm Special Mini Album</h2>
+      <p>₱2350.00</p>
+      <button onclick="addToCart('The ReVe Festival 2022 - Feel My Rhythm Special Mini Album')">Add to Cart</button>
+    </div>
+    
+    <div class="product">
+      <img src="../pictures/rv/finale.jpg" alt="Product 3">
+      <h2> Reve Festival Finale</h2>
+      <p>₱2350.00</p>
+      <button onclick="addToCart('Reve Festival Finale')">Add to Cart</button>
+    </div>
+    
+    <div class="product">
+      <img src="../pictures/rv/queen.jpg" alt="Product 3">
+      <h2>RedVelvet 6th Mini Album</h2>
+      <p>₱2350.00</p>
+      <button onclick="addToCart('RedVelvet 6th Mini Album')">Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="../pictures/rv/water.jpg" alt="Product 3">
+      <h2> Wendy First Album </h2>
+      <p>₱2350.00</p>
+      <button onclick="addToCart('Wendy First Album')">Add to Cart</button>
+    </div>
+    <div class="dropdown">
+      <button onclick="toggleDropdown()" class="dropbtn"><img src="../pictures/logo.png" class="logo"></button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="../html/gidle.html"><img src="../pictures/artists/g-idle.jpg "></a>
+        <a href="../html/light.html"><img src="../pictures/artists/lightsum.jpg"></a>
+        <a href="../html/btob.html""><img src="../pictures/artists/btob.jpg"></a>
+        <a href="../html/bts.html"><img src="../pictures/artists/bts.png "></a>
+        <a href="../html/le.html"><img src="../pictures/artists/le.jpg"></a>
+        <a href="../html/twice.html"><img src="../pictures/artists/twice.png "></a>
+        <a href="../html/sev.html"><img src="../pictures/artists/seventeen.png "></a>
+        <a href="../html/itzy.html"><img src="../pictures/artists/itzy.jpg "></a>
+        <a href="../html/sk.html"><img src="../pictures/artists/straykids.png"></a>
+        <a href="../html/ae.html"><img src="../pictures/artists/aespa.jpg"></a>
+        <a href="../html/exo.html"><img src="../pictures/artists/exo.png"></a>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-bottom">
+      <p>&copy; Seoulfinds.</p>
+    </div>
+  </footer>
+</body>
+</html>
