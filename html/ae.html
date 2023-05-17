@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AESPA</title>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/aespa.js"></script>
+    <script> 
+      function addToCart(itemName) {
+          var cartItems = sessionStorage.getItem('cartItems');
+          if (cartItems) {
+              cartItems = JSON.parse(cartItems);
+              cartItems.push(itemName);
+          } else {
+              cartItems = [itemName];
+          }
+          sessionStorage.setItem('cartItems', JSON.stringify(cartItems));
+          alert(itemName + ' added to cart!');
+      }
+  </script>
+</head>
+<body>
+  
+      
+   <header class="aespa">
+      <h1>Aespa</h1>
+    </header>
+    <nav class="aenav">
+      <a href="../index.html">HOME</a>
+      <a href="../html/about.html">ABOUT US</a>
+      <a href="../html/help.html">HELP</a>
+      <a href="../html/shop.html">SHOP</a>
+      <a href="../html/cart.html  ">CART</a>
+  
+    </nav>
+    </header>
+    <p id="text"></p>
+    <button onclick="generateText()" class="random"><img src="../pictures/info.png"></button>
+    
+  
+  <main>
+    <div class="product">
+      <img src="../pictures/ae/aelight.jpg" alt="Product 1">
+      <h2>Aespa Lightstick</h2>
+      <p>₱2,600.00</p>
+      <button onclick="addToCart('Aespa Lightstick')">Add to Cart</button>
+    </div>
+    
+    <div class="product">
+      <img src="../pictures/ae/world.jpg" alt="Product 1">
+      <h2> Aespa 3rd Mini Album</h2>
+      <p>₱700.00</p>
+      <button onclick="addToCart('Aespa 3rd Mini Album')">Add to Cart</button>
+    </div>
+    
+    <div class="product">
+      <img src="../pictures/ae/girls.jpg" alt="Product 1">
+      <h2> Aespa 2nd Mini Album</h2>
+      <p>₱2350.00</p>
+      <button onclick="addToCart('Aespa 2nd Mini Album')">Add to Cart</button>
+    </div>
+    
+    <div class="product">
+      <img src="../pictures/ae/savage.jpg" alt="Product 1">
+      <h2> Aespa 1st Mini Album</h2>
+      <p>₱2350.00</p>
+      <button onclick="addToCart('Aespa 1st Mini Album')">Add to Cart</button>
+    </div>
+    
+    <div class="product">
+      <img src="../pictures/ae/mamba.jpg" alt="Product 1">
+      <h2>Aespa Debut Single</h2>
+      <p>₱2350.00</p>
+      <button onclick="addToCart('Aespa Debut Single')">Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="../pictures/ae/season.jpg" alt="Product 1"> 
+      <h2> Aespa Season's Greeting 2022</h2>
+      <p>₱2350.00</p>
+      <button onclick="addToCart('Aespa Seasons Greetings')">Add to Cart</button>
+    </div>
+    <div class="dropdown">
+      <button onclick="toggleDropdown()" class="dropbtn"><img src="../pictures/logo.png" class="logo"></button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="../html/gidle.html"><img src="../pictures/artists/g-idle.jpg "></a>
+        <a href="../html/light.html"><img src="../pictures/artists/lightsum.jpg"></a>
+        <a href="../html/btob.html""><img src="../pictures/artists/btob.jpg"></a>
+        <a href="../html/bts.html"><img src="../pictures/artists/bts.png "></a>
+        <a href="../html/le.html"><img src="../pictures/artists/le.jpg"></a>
+        <a href="../html/twice.html"><img src="../pictures/artists/twice.png "></a>
+        <a href="../html/sev.html"><img src="../pictures/artists/seventeen.png "></a>
+        <a href="../html/itzy.html"><img src="../pictures/artists/itzy.jpg "></a>
+        <a href="../html/sk.html"><img src="../pictures/artists/straykids.png"></a>
+        <a href="../html/rv.html"><img src="../pictures/artists/rv.jpg"></a>
+        <a href="../html/exo.html"><img src="../pictures/artists/exo.png"></a>
+     
+     
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-bottom">
+      <p>&copy; Seoulfinds.</p>
+    </div>
+  </footer>
+</body>
+
+ 
+</body>
+</html>
